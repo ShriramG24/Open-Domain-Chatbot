@@ -9,6 +9,7 @@ class PreprocessData:
             df.drop(df[(df.eval_score is None) or (df.profile_match == "")].index, inplace=True)
 
         df.to_json('ConvAI2_DS/new_dialogues.json', orient='records')
+        
 
 
 
