@@ -1,4 +1,3 @@
 venv/
-AmbigQA_DS/
-chatbot.py/
-ConvAI2_DS/new_dialogues.json/
+ConvAI2_DS/
+__pycache__/

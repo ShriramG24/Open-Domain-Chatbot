@@ -81,6 +81,20 @@ def main():
 
     print(f'Final Loss = {loss.item():.4f}')
 
+    to_save = {
+        "model_state": model.state_dict(),
+        "input_size": input_size,
+        "output_size": output_size,
+        "hidden_size": hidden_size,
+        "word_bank": word_bank,
+        "intents": intents,
+    }
+
+    FILE = "model.pth"
+    torch.save(to_save, FILE)
+
+    print(f'Training complete. Model saved to {FILE}.')
+
 if __name__ == '__main__':
     main()
 
