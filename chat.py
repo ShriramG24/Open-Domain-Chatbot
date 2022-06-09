@@ -17,14 +17,10 @@ model = FeedForwardModel(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Nick"
-print("Let's chat! Type 'quit' to exit.")
-while True:
-    sentence = input('You: ')
-    if sentence == 'quit':
-        break
+bot_name = "AIBot"
 
-    sentence = tokenize(sentence)
+def get_response(msg):
+    sentence = tokenize(msg)
     X = bag_of_words(sentence, word_bank)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X)
@@ -36,11 +32,6 @@ while True:
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
 
-    if prob.item() > 0.75:
-        for dialogue in dialogues:
-            if dialogue["intent"] == intent:
-                print(f'{bot_name}: {random.choice(dialogue["responses"])}')
-    else:
-        print(f'{bot_name}: I do not understand...')
-
-
+    for dialogue in dialogues:
+        if dialogue["intent"] == intent:
+            return random.choice(dialogue["responses"])
