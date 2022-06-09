@@ -11,9 +11,9 @@
                   "Hya there"
             ],
             "responses": [
-                  "Hi human, please tell me your username",
-                  "Hello human, please tell me your username",
-                  "Hola human, please tell me your username"
+                  "Hi, please tell me your username",
+                  "Hello, what should I call you?",
+                  "Hola, please tell me your username"
             ],
             "extension":  {
                   "function": "",
@@ -32,20 +32,21 @@
             "intent": "GreetingResponse",
             "text": [
                   "My username is Adam",
-                  "This is Adam",
-                  "I am Adam",
-                  "It is Adam",
+                  "This is Nick",
+                  "I am Sophia",
+                  "I'm Tim",
+                  "It is Jose",
                   "My username is Bella",
-                  "This is Bella",
-                  "I am Bella",
-                  "It is Bella"
+                  "This is Iggy",
+                  "I am Audrey",
+                  "It is Phoebe"
             ],
             "responses": [
-                  "Great! Hi <HUMAN>! How can I help?",
-                  "Good! Hi <HUMAN>, how can I help you?",
-                  "Cool! Hello <HUMAN>, what can I do for you?",
-                  "OK! Hola <HUMAN>, how can I help you?",
-                  "OK! hi <HUMAN>, what can I do for you?"
+                  "Great! How can I help?",
+                  "Good, how can I help you?",
+                  "Cool, what can I do for you?",
+                  "OK, how can I help you?",
+                  "OK, what can I do for you?"
             ],
             "extension":  {
                   "function": "extensions.gHumans.updateHuman",
